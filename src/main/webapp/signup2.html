@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(#00dbde,#fc00ff); /* Neon Color */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 100% of the viewport height */
+        }
+
+        .registration-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            height: 80vh;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            box-shadow: 0 0 0px rgba(0, 255, 204, 0.5); /* Neon box shadow */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        input:hover, input:focus, select:hover, select:focus {
+            box-shadow: 0 0 15px rgba(0, 255, 204, 1); /* Neon box shadow on hover/focus */
+            outline: none;
+        }
+
+        input[type="date"] {
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon box shadow for date input */
+        }
+
+        button {
+            background-color: #00ffcc; /* Neon Color */
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #33ffcc; /* Neon Color on hover */
+            animation: glow 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            to {
+                box-shadow: 0 0 20px #33ffcc; /* Neon glow effect */
+            }
+        }
+
+        .cancel-button {
+            background-color: #ff6666; /* Neon Red Color */
+            margin-top: 10px;
+        }
+
+        .cancel-button:hover {
+            background-color: #ff9999; /* Neon Red Color on hover */
+            animation: glowCancel 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowCancel {
+            to {
+                box-shadow: 0 0 20px #ff9999; /* Neon Red glow effect */
+            }
+        }
+
+        .gender-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .gender-label {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .gender-radio {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Registration Page</h1>
+        
+        <form action="signup2" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required>
+        
+        <div class="gender-container">
+            <label class="gender-label" for="male">Male:</label>
+            <input class="gender-radio" type="radio" id="male" name="gender" value="male">
+            <label class="gender-label" for="female">Female:</label>
+            <input class="gender-radio" type="radio" id="female" name="gender" value="female">
+        </div>
+
+        <button type="submit">Submit</button>
+        <button class="cancel-button" type="reset">Cancel</button>
+
+        </form>
+    </div>
+</body>
+</html>

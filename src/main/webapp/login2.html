@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(#00dbde, #fc00ff); /* Neon Color */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 100% of the viewport height */
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 50px;
+            width: 300px;
+            height: 70vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon box shadow */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        input:hover, input:focus {
+            box-shadow: 0 0 15px rgba(0, 255, 204, 1); /* Neon box shadow on hover/focus */
+            outline: none;
+        }
+
+        button {
+            background-color: #cc208e; /* Neon Color */
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #33ffcc; /* Neon Color on hover */
+            animation: glow 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            to {
+                box-shadow: 0 0 20px #33ffcc; /* Neon glow effect */
+            }
+        }
+
+        .register-link {
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login Page</h1>
+        <form action="login2" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="emph" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="pass" required>
+        <button type="submit">Login</button>
+        <a href=signup2.html class="register-link">Register here</a>
+        </form>
+    </div>
+</body>
+</html>
